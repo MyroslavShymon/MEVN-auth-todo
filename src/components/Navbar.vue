@@ -49,9 +49,7 @@ export default {
   computed: {
     ...mapGetters({ isLoggedIn: "isLoggedIn" }),
     // isLoggedIn: function () {
-
     //   Vue.set(state.shippingFees, method.sellerId, method.fee)
-
     // },
   },
   methods: {
