@@ -32,7 +32,7 @@ app.use(passport.initialize());
 // Bring in the Passport Strategy
 require("./config/passport.config")(passport);
 
-const PORT = config.get("port") || 5000;
+const PORT = config.get("port") || 5001;
 console.log(config.get("mongoUrl"));
 async function start() {
   try {

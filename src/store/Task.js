@@ -13,7 +13,7 @@ const actions = {
     commit("add_task_request");
     try {
       let res = await axios.post(
-        "http://localhost:5000/api/auth/profile",
+        "http://localhost:5001/api/auth/profile",
         profile
       );
       if (res.data.success) {
@@ -27,7 +27,7 @@ const actions = {
   //   async getProfile({ commit }) {
   //     commit("get_profile_request");
   //     try {
-  //       let res = await axios.get("http://localhost:5000/api/auth/profile");
+  //       let res = await axios.get("http://localhost:5001/api/auth/profile");
   //       commit("get_profile", res.data.user);
   //       return res;
   //     } catch (error) {

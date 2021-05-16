@@ -16,7 +16,7 @@ const actions = {
     console.log("commit_login", commit, user);
     commit("auth_request");
     try {
-      let res = await axios.post("http://localhost:5000/api/auth/login", user);
+      let res = await axios.post("http://localhost:5001/api/auth/login", user);
       console.log(res);
       if (res.data.success) {
         const token = res.data.token;
@@ -36,7 +36,7 @@ const actions = {
     commit("register_request");
     try {
       let res = await axios.post(
-        "http://localhost:5000/api/auth/register",
+        "http://localhost:5001/api/auth/register",
         user
       );
       console.log(res);
@@ -62,7 +62,7 @@ const actions = {
   async getProfile({ commit }) {
     commit("get_profile_request");
     try {
-      let res = await axios.get("http://localhost:5000/api/auth/profile");
+      let res = await axios.get("http://localhost:5001/api/auth/profile");
       console.log(res.data);
       commit("get_profile", res.data);
       return res;
